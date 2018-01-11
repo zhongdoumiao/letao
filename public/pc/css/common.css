@@ -1,2 +1,8 @@
 @charset "UTF-8";
 /*在这里面写所有的css代码*/
+body{
+    background-color: #222d32;
+}
+.mt_150 {
+    margin-top: 150px;
+}
