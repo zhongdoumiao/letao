@@ -28,6 +28,10 @@ a:active{
     background-color: #222d32;
     position: absolute;
     left: 0;
+    transition: all 1s;
+}
+.aside.now {
+    left: -180px;
 }
 .title a {
     display: block;
@@ -79,6 +83,10 @@ a:active{
     height: 100%;
     margin-left: 180px;
     background-color: pink;
+    transition: all 1s;
+}
+.main.now {
+    margin-left: 0;
 }
 .main .head {
     width: 100%;
