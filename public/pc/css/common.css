@@ -18,7 +18,7 @@ a:link,
 a:visited,
 a:hover,
 a:active{
-    color: #fff;
+    /*color: #fff;*/
     text-decoration: none;
 }
 /*首页侧边栏*/
@@ -29,6 +29,9 @@ a:active{
     position: absolute;
     left: 0;
     transition: all 1s;
+}
+.aside a{
+    color: #ffffff;
 }
 .aside.now {
     left: -180px;
@@ -82,7 +85,7 @@ a:active{
 .main {
     height: 100%;
     margin-left: 180px;
-    background-color: pink;
+    /*background-color: pink;*/
     transition: all 1s;
 }
 .main.now {
@@ -95,6 +98,19 @@ a:active{
     padding: 0 20px 0 20px;
 }
 .main .head a {
+    color: #ffffff;
     font-size: 16px;
     line-height: 50px;
+}
+.content .left,
+.content .right {
+    height: 400px;
+    width: 50%;
+    float: left;
+}
+.content .left {
+    background-color: pink;
+}
+.content .right {
+    background-color: palegreen;
 }

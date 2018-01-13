@@ -3,7 +3,7 @@
  */
 $(function(){
     //进度条功能
-    //NProgress.configure({ showSpinner: false });//关闭进度环
+    NProgress.configure({ showSpinner: false });//关闭进度环
     $(document).ajaxStart(function(){
         NProgress.start();
     });
@@ -35,5 +35,20 @@ $(function(){
         console.log(666);
         $(".aside").toggleClass("now");
         $(".main").toggleClass("now")
+    });
+    //退出登录的功能
+    $(".icon_logout").on("click",function(){
+        $("#logoutModal").modal("show");
+    });
+    $(".btn_logout").off().on("click",function(){
+        $.ajax({
+            type:"get",
+            url:"/employee/employeeLogout",
+            success:function(info){
+                if(info.success){
+                    location.href = "login.html"
+                }
+            }
+        })
     })
 });
