@@ -1,0 +1,40 @@
+@charset "UTF-8";
+.main .l-main {
+  width: 90px;
+  height: 100%;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+.main .l-main li.now a {
+  border-right: none;
+  background-color: #fff;
+}
+.main .l-main li > a {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 16px;
+  background-color: pink;
+  border-right: 1px solid red;
+  border-bottom: 1px solid red;
+}
+.main .r-main {
+  margin-left: 90px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.main .r-main li {
+  float: left;
+  width: 33.33%;
+}
+.main .r-main img {
+  width: 62px;
+  height: 62px;
+  margin: 0 auto;
+}
+.main .r-main p {
+  text-align: center;
+}

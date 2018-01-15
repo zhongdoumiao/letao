@@ -21,9 +21,9 @@ $(function(){
                     currentPage:page,
                     totalPages:Math.ceil(info.total / info.size),
                     numberOfPages:5,
-                    onPageClicked:function(event, originalEvent, type,p){
+                    onPageClicked:function(a, b,c,p){
                         page = p;
-                        render()
+                        render();
                     }
                 })
             }

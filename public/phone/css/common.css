@@ -1,0 +1,87 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body,
+html {
+  height: 100%;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding-top: 45px;
+  padding-bottom: 55px;
+  position: relative;
+  background-color: #fff;
+}
+.container .header {
+  max-width: 640px;
+  width: 100%;
+  height: 45px;
+  background-color: #069;
+  position: absolute;
+  top: 0;
+}
+.container .header .left-icon,
+.container .header .right-icon {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  line-height: 45px;
+  color: #ffffff;
+}
+.container .header .left-icon {
+  left: 0;
+}
+.container .header .right-icon {
+  right: 0;
+}
+.container .header h4 {
+  font-weight: normal;
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 45px;
+  margin: 0;
+}
+.container .footer {
+  max-width: 640px;
+  width: 100%;
+  height: 55px;
+  background-color: #069;
+  position: absolute;
+  bottom: 0;
+}
+.container .footer li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding-top: 8px;
+}
+.container .footer li a {
+  color: #ffffff;
+}
+.container .footer li p {
+  color: #ffffff;
+  font-size: 14px;
+  margin: 0;
+}
+.main {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.active span {
+  color: darkorange;
+}
+.active p {
+  color: darkorange !important;
+}

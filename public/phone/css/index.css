@@ -1,0 +1,29 @@
+@charset "UTF-8";
+.main .nav {
+  padding: 10px;
+}
+.main .nav li {
+  float: left;
+  width: 33.33%;
+}
+.main .nav img {
+  width: 100%;
+}
+.product {
+  padding: 10px;
+}
+.product .item:nth-child(odd) {
+  margin-right: 4%;
+}
+.product .item {
+  display: block;
+  float: left;
+  width: 48%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.product .item img {
+  width: 100%;
+}
