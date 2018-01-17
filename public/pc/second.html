@@ -48,11 +48,33 @@
         <a href="javascript:;" class="pull-right icon_logout" ><span class="glyphicon glyphicon-log-out"></span></a>
     </div>
     <!--路径导航-->
-    <ol class="breadcrumb">
-        <li><a href="#">管理系统</a></li>
-        <li><a href="#">分类管理</a></li>
-        <li class="active">二级分类</li>
-    </ol>
+    <div class="content">
+        <ol class="breadcrumb">
+            <li><a href="#">管理系统</a></li>
+            <li><a href="#">分类管理</a></li>
+            <li class="active">二级分类</li>
+        </ol>
+        <button class="btn btn-default mb_20 btn_add">添加分类</button>
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <td width="10%">序号</td>
+                <td width="30%">一级分类名称</td>
+                <td width="30%">二级分类名称</td>
+                <td width="30%">二级分类LOGO</td>
+            </tr>
+            </thead>
+            <tbody>
+
+            <!--挖个坑-->
+
+            </tbody>
+        </table>
+        <!--用于存放分页的内容，内容会自动生成，需要使用ul-->
+        <div class="text-right">
+            <ul id="paginator"></ul>
+        </div>
+    </div>
 </div>
 <!--退出登录模态框-->
 <div class="modal fade" tabindex="-1" id="logoutModal">
@@ -72,9 +94,69 @@
         </div>
     </div>
 </div>
+<!--添加分类模态框-->
+<div class="modal fade" tabindex="-1" id="addModal">
+    <div class="modal-dialog modal-sm" >
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4 class="modal-title">温馨提示</h4>
+            </div>
+            <form id="form">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                               请选择一级分类
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入二级分类的名称" name="categoryName">
+                    </div>
+                    <div class="form-group">
+                        <label for="fileupload" class="btn btn-default">上传图片</label>
+                        <input type="file" id="fileupload">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <!--需要把type改成submit才能把表单进行提交-->
+                    <!--autofocus: 自动获取焦点 autocomplete:自动补全 multiple: form-->
+                    <!-- form="form" 让按钮跟上面关联上了，效果就是相当于写在form内部。-->
+                    <button type="submit" class="btn btn-primary">添加</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 </html>
 <script src="./lib/jquery/jquery.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="./lib/nprogress/nprogress.js"></script>
+<script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+<script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
 <script src="./js/common.js"></script>
+<script src="./js/second.js"></script>
+
+<!--准备模板-->
+<script type="text/html" id="tpl">
+{{each rows v i}}
+    <tr>
+        <td>{{(page-1)*size+i+1}}</td>
+        <td>{{v.categoryName}}</td>
+        <td>{{v.brandName}}</td>
+        <td><img src="{{v.brandLogo?v.brandLogo:'images/none.png'}}" width="50" height="50" alt=""></td>
+    </tr>
+{{/each}}
+</script>

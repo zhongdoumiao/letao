@@ -1,0 +1,43 @@
+@charset "UTF-8";
+.main .search_input {
+    margin: 0 !important;
+    height: 34px;
+    border: 1px solid #007aff;
+    font-size: 12px;
+    border-radius: 5px;
+}
+.main .search {
+    padding: 10px;
+    position: relative;
+}
+.main .search_btn {
+    height: 34px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 0 5px 5px 0;
+}
+.main .history {
+    padding: 10px;
+}
+.main .history .title span{
+    font-size: 12px;
+    color: #666666;
+    height: 30px;
+    line-height: 30px;
+}
+.main .history ul{
+    border: 1px dashed red;
+}
+.main .history li {
+    border-bottom: 1px dashed red;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 15px;
+}
+.main .history li:last-child{
+    border-bottom: none;
+}
+.main .history a {
+    font-size: 12px;
+}

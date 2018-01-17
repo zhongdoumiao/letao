@@ -31,6 +31,7 @@
   width: 33.33%;
 }
 .main .r-main img {
+  display: block;
   width: 62px;
   height: 62px;
   margin: 0 auto;
